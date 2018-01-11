@@ -1,0 +1,1 @@
+curl -fsSL https://raw.githubusercontent.com/Bluelich/centos_test/master/centos.sh | sh
