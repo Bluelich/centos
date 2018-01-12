@@ -18,14 +18,15 @@ yum groupinstall -y 'Development Tools';
 yum remove -y vim-minimal;
 yum update -y vim;
 
-git clone https://github.com/Bluelich/centos.git ~/centos; 
-cp $(path)/.vimrc ~;
+cd ~;
+git clone https://github.com/Bluelich/centos.git; 
+cp ~/centos/.vimrc ~;
 
 wget -P ~ https://jaist.dl.sourceforge.net/project/vimcdoc/vimcdoc/vimcdoc-2.1.0.tar.gz; 
 tar -xzf ~/vimcdoc-2.1.0.tar.gz; 
 cp -r ~/vimcdoc-2.1.0/doc/. ~/.vim/doc;
 rm -rf ~/.vim/bundle;
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
-# cp $(path)/motd /etc/motd;
+# cp ~/centos/motd /etc/motd;
 yum -y install zsh;
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
