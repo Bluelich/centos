@@ -3,7 +3,7 @@
 path="$( cd "$(dirname "$0"  )" && pwd)";
 
 localectl set-locale LC_CTYPE=en_US.UTF-8;
-yum clean;
+yum clean -y;
 yum update  -y;
 yum upgrade -y;
 rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm;
