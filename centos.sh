@@ -12,11 +12,11 @@ curl -L https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim
 yum -y install yum-utils;
 yum-config-manager --add-repo https://openresty.org/package/centos/openresty.repo;
 yum install -y epel-release ruby git curl file python-setuptools bash-completion bash-completion-extras zsh vsftpd perl-ExtUtils-Embed perl-Digest-MD5 iptables-services httpd php php-mysql php-gd libjpeg php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-bcmath php-mhash go node rust mysql-community-server ctags gcc rpm rpm-devel rpm-build-libs rpmdevtools zlib zlib-devel openresty luajit  luajit-devel gperftools gd-devel libxslt-devel openssl openssl-devel pcre pcre-devel clang clang-devel cmake python;
-yum provides geoip-devel;
+yum provides -y geoip-devel;
 yum install -y geoip-devel;
-yum groupinstall 'Development Tools';
-yum remove vim-minimal;
-yum update vim;
+yum groupinstall -y 'Development Tools';
+yum remove -y vim-minimal;
+yum update -y vim;
 
 git clone https://github.com/Bluelich/centos.git ~/centos; cp $(path)/.vimrc ~;
 
