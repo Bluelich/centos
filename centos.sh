@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# path="$( cd "$(dirname "$0"  )" && pwd)";
+path="$( cd "$(dirname "$0"  )" && pwd)";
 
 localectl set-locale LC_CTYPE=en_US.UTF-8;
 yum clean;
@@ -16,8 +16,8 @@ yum groupinstall 'Development Tools';
 yum remove vim-minimal;
 yum update vim;
 git clone https://github.com/Bluelich/centos.git ~/centos;
-cp -r ~/centos/.vim ~;
-cp ~/centos/.vimrc ~;
+cp -r $(path)/.vim ~;
+cp $(path)/.vimrc ~;
 wget -P ~ https://jaist.dl.sourceforge.net/project/vimcdoc/vimcdoc/vimcdoc-2.1.0.tar.gz; tar -xzf ~/vimcdoc-2.1.0.tar.gz; cp -r ~/vimcdoc-2.1.0/doc/. ~/.vim/doc;
 rm -rf ~/.vim/bundle;
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
