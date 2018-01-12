@@ -55,15 +55,9 @@ filetype plugin on  					                  "载入文件类型插件
 filetype indent on 						                  "为特定文件类型载入相关缩进文件
 
 "********************************
-"             Themes                                       
-"********************************
-colorscheme lucario
-set background=dark                            "背景使用黑色 
-set guifont=Courier_New:h10:cANSI              "设置字体
-
-"********************************
 "             General                                       
 "********************************
+set background=dark                            "背景使用黑色 
 set title                                      "显示文件名
 set ruler                                      "显示状态栏标尺
 set showmatch                                  "高亮显示匹配的括号
