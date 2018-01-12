@@ -40,6 +40,7 @@ Plugin 'sjl/gundo'		  						            "撤销tree可视化
 Plugin 'terryma/vim-multiple-cursors'		        "True Sublime Text style multiple selections for Vim
 Plugin 'itchyny/calendar'						            "日历 :Calendar
 Plugin 'godlygeek/tabular'					            "Text filtering and alignment
+Plugin 'yianwillis/vimcdoc'                     "中文帮助
 
 call vundle#end()                               "required
 
