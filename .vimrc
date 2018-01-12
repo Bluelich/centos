@@ -36,9 +36,9 @@ Plugin 'Shougo/neocomplete'						          "completion
 Plugin 'nathanaelkane/vim-indent-guides'		    "缩进可视化,方便条件分支等的配对
 Plugin 'matze/vim-move'							            "快速移动  A-   Move current line/selection   k:up j:down
 Plugin 'Valloric/YouCompleteMe'				          "code completion
-Plugin 'sjl/gundo'		  						            "撤销tree可视化
+Plugin 'sjl/gundo.vim'		  						        "撤销tree可视化
 Plugin 'terryma/vim-multiple-cursors'		        "True Sublime Text style multiple selections for Vim
-Plugin 'itchyny/calendar'						            "日历 :Calendar
+Plugin 'itchyny/calendar.vim'						        "日历 :Calendar
 Plugin 'godlygeek/tabular'					            "Text filtering and alignment
 Plugin 'yianwillis/vimcdoc'                     "中文帮助
 
@@ -166,34 +166,26 @@ let g:move_key_modifier = 'C'
 let g:indent_guides_enable_on_vim_startup = 1
 
 "For NERDTree
+"open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+"open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"open NERDTree automatically when vim starts up on opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"change default arrows
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+"显示dot-files
+let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
 let NERDChristmasTree=1
 let NERDTreeChDirMode=2
 let g:NERDTreeWinSize = 32 
+"open NERDTree with Ctrl+n
 map <C-n>f :NERDTreeToggle<CR>
 " let loaded_nerd_tree=1
-" let g:NERDTreeDirArrowExpandable = '▸'
-" let g:NERDTreeDirArrowCollapsible = '▾'
-"File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 "For nerdtree-git-plugin
 let g:NERDTreeIndicatorMapCustom = {

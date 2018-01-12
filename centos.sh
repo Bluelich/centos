@@ -1,6 +1,7 @@
 #!/bin/bash
-
+rm -rf /var/cache/yum;
 localectl set-locale LC_CTYPE=en_US.UTF-8;
+localectl set-locale LC_ALL=en_US.UTF-8;
 yum clean -y all;
 yum update  -y;
 yum upgrade -y;
