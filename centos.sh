@@ -18,9 +18,12 @@ yum groupinstall -y 'Development Tools';
 yum remove -y vim-minimal;
 yum update -y vim;
 
-git clone https://github.com/Bluelich/centos.git ~/centos; cp $(path)/.vimrc ~;
+git clone https://github.com/Bluelich/centos.git ~/centos; 
+cp $(path)/.vimrc ~;
 
-wget -P ~ https://jaist.dl.sourceforge.net/project/vimcdoc/vimcdoc/vimcdoc-2.1.0.tar.gz; tar -xzf ~/vimcdoc-2.1.0.tar.gz; cp -r ~/vimcdoc-2.1.0/doc/. ~/.vim/doc;
+wget -P ~ https://jaist.dl.sourceforge.net/project/vimcdoc/vimcdoc/vimcdoc-2.1.0.tar.gz; 
+tar -xzf ~/vimcdoc-2.1.0.tar.gz; 
+cp -r ~/vimcdoc-2.1.0/doc/. ~/.vim/doc;
 rm -rf ~/.vim/bundle;
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
 # cp $(path)/motd /etc/motd;
