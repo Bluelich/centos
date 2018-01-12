@@ -17,7 +17,7 @@ yum install -y openssl openssl-devel pcre pcre-devel clang clang-devel cmake;
 yum install -y rpm rpm-devel rpm-build-libs rpmdevtools;
 yum install -y php php-mysql php-gd libjpeg php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-bcmath php-mhash;
 yum install -y perl-ExtUtils-Embed perl-Digest-MD5;
-yum install -y python python-setuptools python34 python34-setuptools;
+yum install -y python python-setuptools python-devel python34 python34-setuptools python34-devel;
 yum provides -y geoip-devel;
 yum install -y geoip-devel;
 yum groupinstall -y 'Development Tools';
@@ -32,3 +32,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
 # cp ~/centos/motd /etc/motd;
 yum -y install zsh;
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
+
+# YCM     ./install.py --clang-completer --system-libclang
