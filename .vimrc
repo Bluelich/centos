@@ -91,7 +91,6 @@ set fillchars=vert:\ ,stl:\ ,stlnc:\           "在被分割的窗口间显示�
 set bsdir=buffer                               "设定文件浏览器目录为当前目录 
 set autochdir                                  "自动切换当前目录为当前文件所在的目录
 set clipboard=unnamed                          "和系统共享粘贴板
-set relativenumber                             "Show related row numbers
 set incsearch                                  "输入搜索内容时就显示搜索结果
 set hlsearch                                   "搜索时高亮显示被找到的文本
 set noerrorbells                               "关闭错误信息响铃
@@ -182,18 +181,7 @@ map <C-n>f :NERDTreeToggle<CR>
 " let loaded_nerd_tree=1
 
 "For nerdtree-git-plugin
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
+let g:NERDTreeIndicatorMapCustom = {"Modified":"✹" ,"Staged":"✚" ,"Untracked":"✭" ,"Renamed":"➜" ,"Unmerged":"═" ,"Deleted":"✖" ,"Dirty":"✗" ,"Clean":"✔︎" ,'Ignored':'☒' ,"Unknown":"?"}
 
 "For vim-easymotion
 let g:EasyMotion_leader_key = ","

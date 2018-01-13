@@ -2,6 +2,8 @@
 rm -rf /var/cache/yum;
 localectl set-locale LC_CTYPE=en_US.UTF-8;
 localectl set-locale LC_ALL=en_US.UTF-8;
+cp ~/centos/conf/motd /etc/motd;
+
 yum clean -y all;
 yum update  -y;
 yum upgrade -y;
@@ -38,5 +40,3 @@ yum --enablerepo=elrepo-kernel install kernel-ml;
 
 yum -y install zsh;
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
-
-# YCM     ./install.py --clang-completer --system-libclang
