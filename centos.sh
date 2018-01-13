@@ -21,6 +21,7 @@ yum install -y rpm rpm-devel rpm-build-libs rpmdevtools;
 yum install -y php php-mysql php-gd libjpeg php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-bcmath php-mhash;
 yum install -y perl-ExtUtils-Embed perl-Digest-MD5;
 yum install -y python python-setuptools python-devel python34 python34-setuptools python34-devel;
+yum install -y mono-devel nodejs;
 yum provides -y geoip-devel;
 yum install -y geoip-devel;
 yum groupinstall -y 'Development Tools';
