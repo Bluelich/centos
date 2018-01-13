@@ -30,6 +30,12 @@ cp ~/centos/.vimrc ~;
 rm -rf ~/.vim/bundle;
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
 # cp ~/centos/motd /etc/motd;
+
+# 升级内核
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org;
+rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm;
+yum --enablerepo=elrepo-kernel install kernel-ml;
+
 yum -y install zsh;
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
 
