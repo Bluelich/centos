@@ -32,7 +32,7 @@ cp -r ~/centos/.ssh ~;
 cp ~/centos/.vimrc ~;
 rm -rf ~/.vim/bundle;
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
-# cp ~/centos/motd /etc/motd;
+cp ~/centos/conf/motd /etc/motd;
 
 # 升级内核
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org;
