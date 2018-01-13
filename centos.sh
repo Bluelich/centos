@@ -38,6 +38,7 @@ cp ~/centos/conf/motd /etc/motd;
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org;
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm;
 yum --enablerepo=elrepo-kernel install kernel-ml;
+grub2-set-default 0;
 
 yum -y install zsh;
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
