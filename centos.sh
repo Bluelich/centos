@@ -24,6 +24,7 @@ yum install -y python python-setuptools python-devel python34 python34-setuptool
 yum install -y mono-devel nodejs;
 yum provides -y geoip-devel;
 yum install -y geoip-devel;
+yum install -y cargo;
 yum groupinstall -y 'Development Tools';
 yum remove -y vim-minimal;
 yum update -y vim;
