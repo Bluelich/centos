@@ -108,9 +108,9 @@ set t_Co=256                                    "256色
 "             Other                                       
 "********************************
 syntax enable
-syntax on                                      "语法高亮
-autocmd InsertLeave * se nocul                 "用浅色高亮当前行  
-autocmd InsertEnter * se cul                   "用浅色高亮当前行  
+syntax on                                       "语法高亮
+autocmd InsertLeave * se nocul                  "用浅色高亮当前行  
+autocmd InsertEnter * se cul                    "用浅色高亮当前行  
 
 if has("gui_running")
   set guifont=Source\ Code\ Pro\:h18  " set guifont=PowerlineSymbols\ for\ Powerline
