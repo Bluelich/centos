@@ -36,6 +36,22 @@ rm -rf ~/.vim/bundle;
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
 cp ~/centos/conf/motd /etc/motd;
 
+# install vim plugins   +qall 会自动退出vim
+vim +PluginInstall! +qall;
+
+#vim
+#YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe;
+#处理clang校验问题
+#第一次执行创建文件,第二次执行获取key
+gpg --recv-keys 02119294;
+gpg --recv-keys 02119294;
+./install.py --all;
+
+# powerline-font
+git clone https://github.com/powerline/fonts.git --depth=1;
+sh ~/fonts/install.sh;
+
 # 升级内核
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org;
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm;
