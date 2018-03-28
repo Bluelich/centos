@@ -45,6 +45,9 @@ vim +PluginInstall! +qall;
 #第一次执行创建文件,第二次执行获取key
 gpg --recv-keys 02119294;
 gpg --recv-keys 02119294;
+cd ~/.vim/bundle/YouCompleteMe;
+git submodule update --init --recursive;
+cd ~;
 python ~/.vim/bundle/YouCompleteMe/install.py --all;
 
 # powerline-font
