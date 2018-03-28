@@ -49,6 +49,7 @@ gpg --recv-keys 02119294;
 ./install.py --all;
 
 # powerline-font
+cd ~;
 git clone https://github.com/powerline/fonts.git --depth=1;
 sh ~/fonts/install.sh;
 
