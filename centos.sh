@@ -30,7 +30,6 @@ yum remove -y vim-minimal;
 yum update -y vim;
 
 git clone https://github.com/Bluelich/centos.git ~/centos; 
-cp -r ~/centos/.ssh ~;
 cp ~/centos/.vimrc ~;
 rm -rf ~/.vim/bundle;
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
