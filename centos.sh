@@ -60,5 +60,8 @@ rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm;
 yum --enablerepo=elrepo-kernel install -y kernel-ml;
 grub2-set-default 0;
 
+#oh-my-zsh
 yum -y install zsh;
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+mkdir ~/.oh-my-zsh/custom/themes;
+cp    ~/centos/conf/lambda-mod.zsh-theme .oh-my-zsh/custom/themes;
