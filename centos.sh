@@ -66,3 +66,4 @@ yum -y install zsh;
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 mkdir ~/.oh-my-zsh/custom/themes;
 cp    ~/centos/conf/lambda-mod.zsh-theme .oh-my-zsh/custom/themes;
+cp    ~/centos/conf/.zshrc ~/.zshrc
